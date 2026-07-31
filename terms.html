@@ -14,12 +14,24 @@
   .meta { color: #666; font-size: 13px; }
   ol { padding-left: 22px; }
   .note { background: #fdece2; border-radius: 10px; padding: 12px 16px; font-size: 14px; }
+  /* 特定商取引法に基づく表記の一覧。狭い画面では横スクロールさせず、
+     見出しを上、内容を下に積んで読めるようにする。 */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid #e6e3dd; }
+  th { width: 34%; white-space: nowrap; color: #555; font-weight: 600; background: #fdf7f3; }
+  @media (max-width: 560px) {
+    th, td { display: block; width: auto; white-space: normal; }
+    th { border-bottom: none; padding-bottom: 2px; }
+    td { padding-top: 0; }
+  }
   @media (prefers-color-scheme: dark) {
     body { background: #0d0d0d; color: #eaeae5; }
     h2 { border-bottom-color: #2a1c14; }
     .meta { color: #999; }
     .note { background: #2a1c14; }
     a { color: #ff8a5b; }
+    th, td { border-bottom-color: #2a2a28; }
+    th { color: #b9b9b2; background: #171310; }
   }
 </style>
 </head>
@@ -37,10 +49,10 @@
 
   <h2>第2条（サブスクリプション・課金）</h2>
   <ol>
-    <li>本アプリのうち「超かんたん版」は、無料でご利用いただけます。「かんたん版」および「くわしい版」のご利用には、サブスクリプション（自動更新型のアプリ内課金）のご登録が必要です。課金は Apple App Store または Google Play のアプリ内課金を通じて行われます。</li>
+    <li>本アプリのうち「超かんたん版」および「かんたん版」の質問への回答は、無料でご利用いただけます。「かんたん版」で算出した上限額の金額表示、および「詳細版」のご利用には、サブスクリプション（自動更新型のアプリ内課金）のご登録が必要です。課金は Apple App Store または Google Play のアプリ内課金を通じて行われます。</li>
     <li><strong>サブスクリプションは、現在の期間終了の24時間以上前に解約されない限り、自動的に更新され、同額が請求されます。</strong>料金・期間はストアの購入画面に表示される内容が適用されます。</li>
     <li>解約は、利用者ご自身が端末のストア設定（App Store／Google Play のアカウント設定）から行うことができます。解約しても、既に開始している期間の満了までは本アプリをご利用いただけます。</li>
-    <li>返金の可否は、Apple／Google の各ポリシーおよび判断に従います。当方は個別の返金を行う権限を有しません。</li>
+    <li>返金については、各ストアのポリシーが適用されます。Google Play の場合、購入から48時間以内は Google が直接受け付けます。48時間を経過した後のご請求は、本規約末尾の連絡先まで当方へお申し出ください。内容を確認のうえ、法令および当方の返金方針に従って対応します（返金の可否は、利用状況・請求内容などをふまえて個別に判断します）。App Store の場合は、Apple のポリシーに従い Apple が対応します。</li>
   </ol>
 
   <h2>第3条（免責・計算結果の取り扱い）</h2>
@@ -72,10 +84,26 @@
   <p>当方は、必要に応じて本規約を変更することがあります。重要な変更を行う場合は、本アプリ内またはストアの掲載ページ等で告知します。変更後に本アプリを利用された場合、変更後の本規約に同意いただいたものとみなします。</p>
 
   <h2>第9条（準拠法・裁判管轄）</h2>
-  <p>本規約の準拠法は日本法とし、本アプリに関して当方と利用者との間に紛争が生じた場合には、さいたま地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  <p>本規約の準拠法は日本法とし、本アプリに関して当方と利用者との間に紛争が生じた場合には、さいたま地方裁判所を第一審の合意管轄裁判所とします。ただし、利用者の住所地を管轄する裁判所への提訴を妨げるものではありません。</p>
 
   <h2>第10条（お問い合わせ）</h2>
   <p>事業者：AzeLab<br>連絡先：azekawalab.2026@gmail.com</p>
+
+  <h2>特定商取引法に基づく表記</h2>
+  <p>継続課金（サブスクリプション）を販売するため、特定商取引法に基づき以下を表示します。</p>
+  <table>
+    <tr><th>販売事業者</th><td>AzeLab</td></tr>
+    <tr><th>運営責任者</th><td>畔川 崇弘</td></tr>
+    <tr><th>所在地</th><td>〒336-0025 埼玉県さいたま市南区文蔵5-19-6</td></tr>
+    <tr><th>電話番号</th><td>070-8955-1680（受付時間：平日10:00〜17:00）</td></tr>
+    <tr><th>メールアドレス</th><td>azekawalab.2026@gmail.com</td></tr>
+    <tr><th>販売価格</th><td>月額 100円（税込）</td></tr>
+    <tr><th>価格以外の必要料金</th><td>通信料は利用者のご負担となります</td></tr>
+    <tr><th>支払方法・支払時期</th><td>Apple App Store または Google Play のアプリ内課金。購入手続きの完了時に課金され、以後は解約されない限り1か月ごとに自動更新されます</td></tr>
+    <tr><th>役務の提供時期</th><td>購入手続きの完了後、直ちに全機能をご利用いただけます</td></tr>
+    <tr><th>解約の方法</th><td>端末の App Store／Google Play のサブスクリプション設定から、次回更新日の24時間前までに解約してください</td></tr>
+    <tr><th>返品・キャンセル</th><td>デジタルコンテンツのため、購入後の返品・返金には応じられません。返金は各ストアの規約・手続きに従います</td></tr>
+  </table>
 </div>
 </body>
 </html>
